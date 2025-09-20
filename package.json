@@ -8,16 +8,15 @@
         "dev": "nodemon --watch src --ext ts --exec tsx src/app.ts",
         "watch:build": "tsc --build --force --verbose --watch",
         "knex:dev": "tsx src/utils/knex.ts",
-
         "build": "tsc --allowJs",
         "start": "node dist/app.js",
         "knex": "node dist/utils/knex.js",
-        
         "tsc:check": "tsc --allowJs --noEmit",
         "prettier": "prettier --config .prettierrc.json src/**/*.js --check",
         "prettier-format": "prettier --config .prettierrc.json src/**/*.js --write",
         "eslint": "eslint",
-        "eslint-fix": "eslint --fix"
+        "eslint-fix": "eslint --fix",
+        "lint": "eslint ."
     },
     "imports": {
         "#*": [
@@ -31,12 +30,16 @@
     "author": "lucard17",
     "license": "ISC",
     "dependencies": {
+        "axios": "^1.11.0",
         "commander": "^13.1.0",
+        "cron": "^4.3.3",
         "dotenv": "^16.3.1",
         "googleapis": "^144.0.0",
         "knex": "^3.0.1",
         "log4js": "^6.9.1",
+        "module-alias": "^2.2.3",
         "pg": "^8.11.3",
+        "typescript-eslint": "^8.44.0",
         "zod": "^3.23.8"
     },
     "devDependencies": {
@@ -60,6 +63,7 @@
         "eslint-plugin-jsdoc": "^50.3.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-prettier": "^5.2.1",
+        "typescript-eslint": "^8.21.0",
         "eslint-plugin-unused-imports": "^4.1.4",
         "jest": "^29.7.0",
         "nodemon": "^3.0.2",
